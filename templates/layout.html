@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<html>
+  <head>
+    <title>Git Links</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Goat's Git Links</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('links') }} ">Links</a></li>
+            <li><a href="https://forms.gle/a7cQUe56d9VLVRGS7">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }} ">Sign In</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

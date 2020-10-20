@@ -1,0 +1,23 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    <div class="home">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Sign In">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+     <h2>
+
+       </h2>
+   <a href="https://forms.gle/a7cQUe56d9VLVRGS7" target="_blank">
+	<button>SignUp</button>
+    </div>
+{% endblock %}
